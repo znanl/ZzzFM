@@ -16,6 +16,7 @@ $('.control .home').click(function(){
     window.open('https://idongu.com');
 })
 $('.control .next').click(function(){
+    oAudio.pause();
     next_music();
 })
 $('.container .center').click(function(){
