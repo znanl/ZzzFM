@@ -4,19 +4,21 @@ oAudio = document.getElementById('player');
 btn = $("#m_play");
 album = $("#album");
 
-$(document).ready(function () {
-    $.get("player.php", function (data) {
-        mp3_info = JSON.parse(data);
-        $("#player").attr("src", mp3_info.mp3);
-        $("#album").css("background-image", "url('" + mp3_info.cover + "')");
-    });
-});
+// $(document).ready(function () {
+//     $.get("player.php", function (data) {
+//         mp3_info = JSON.parse(data);
+//         $("#player").attr("src", mp3_info.mp3);
+//         $("#album").css("background-image", "url('" + mp3_info.cover + "')");
+//     });
+// });
 
 $('.control .home').click(function(){
     window.open('https://idongu.com');
 })
 $('.control .next').click(function(){
     oAudio.pause();
+    btn.attr("class", "fa fa-play");
+    album.addClass("paused");
     next_music();
 })
 $('.container .center').click(function(){
