@@ -17,8 +17,6 @@ $('.control .home').click(function(){
 })
 $('.control .next').click(function(){
     oAudio.pause();
-    btn.attr("class", "fa fa-play");
-    album.addClass("paused");
     next_music();
 })
 $('.container .center').click(function(){
