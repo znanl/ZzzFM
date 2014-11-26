@@ -3,12 +3,12 @@ ZzzFM
 私人電臺，資源是使用的網易雲音樂
 
 #####歌曲设置
-修改list.php中的歌曲ID和歌单ID
-直接新建一個歌單給電臺使用就行了，簡單省事
+- 修改list.php中的歌曲ID和歌单ID
+- 直接新建一個歌單給電臺使用就行了，簡單省事
 
 #####來瞧一下
-http://fm-dongu.rhcloud.com/
-能上就好，我會亂刪東西，因此你打開的時候可能會...
+- http://fm-dongu.rhcloud.com/
+- 能上就好，我會亂刪東西，因此你打開的時候可能會...
 
 #####特別注意
 - 我的虛擬主機（PHP 5.2-5.4）一直用不了，重傷。沒想到放到OpenShift上可以使用，被“萌”的一臉血
@@ -18,3 +18,4 @@ http://fm-dongu.rhcloud.com/
 - 專輯圖片的載入太拖泥帶水了，這個自個想辦法
 - 網易雲音樂回抽你們知道麼，大霧 :)
 - 不知道高分辨率下的顯示效果，反正是能用吧
+- NetEase Cloud Music(NCM) is a very cool music website in China, and this project must need NCM. The project isn't useful for those that they're not Chinese, but you can listen to music in here(http://music.163.com/).
