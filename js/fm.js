@@ -4,9 +4,8 @@ oAudio = document.getElementById('player');
 btn = $("#m_play");
 album = $("#album");
 
-
 $('.control .home').click(function(){
-    window.open('http://music.163.com');
+    window.open('https://idongu.com'); //这里放你的主页，现在这个是我的主页
 })
 $('.control .next').click(function(){
     oAudio.pause();
@@ -20,7 +19,7 @@ $("#player").bind("ended", function () {
 });
 
 function update_progress() {
-        $('body').width() > 422 ? $('.progress .current').css({'width': oAudio.currentTime / oAudio.duration * 100 + '%'}) + ($('.album img').css('opacity') != 1 ? $('.album img').css({'opacity': 1}) : '') : $('.album img').css({'opacity': 1.1 - oAudio.currentTime / oAudio.duration});
+    $('body').width() > 422 ? $('.progress .current').css({'width': oAudio.currentTime / oAudio.duration * 100 + '%'}) + ($('.album img').css('opacity') != 1 ? $('.album img').css({'opacity': 1}) : '') : $('.album img').css({'opacity': 1.1 - oAudio.currentTime / oAudio.duration});
 }
 
 function m_play() {
@@ -58,4 +57,3 @@ function load_music() {
 }
 
 window.onload = next_music;
-

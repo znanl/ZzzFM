@@ -2,7 +2,6 @@
 include 'list.php';
 include 'api.php';
 
-
 foreach ($playlist_list as $key) {
     $json = get_playlist_info($key);
     $arr = json_decode($json, true);
