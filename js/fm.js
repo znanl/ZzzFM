@@ -4,16 +4,9 @@ oAudio = document.getElementById('player');
 btn = $("#m_play");
 album = $("#album");
 
-// $(document).ready(function () {
-//     $.get("player.php", function (data) {
-//         mp3_info = JSON.parse(data);
-//         $("#player").attr("src", mp3_info.mp3);
-//         $("#album").css("background-image", "url('" + mp3_info.cover + "')");
-//     });
-// });
 
 $('.control .home').click(function(){
-    window.open('https://idongu.com');
+    window.open('http://music.163.com');
 })
 $('.control .next').click(function(){
     oAudio.pause();
@@ -26,14 +19,16 @@ $("#player").bind("ended", function () {
     next_music();
 });
 
+function update_progress() {
+        $('body').width() > 422 ? $('.progress .current').css({'width': oAudio.currentTime / oAudio.duration * 100 + '%'}) + ($('.album img').css('opacity') != 1 ? $('.album img').css({'opacity': 1}) : '') : $('.album img').css({'opacity': 1.1 - oAudio.currentTime / oAudio.duration});
+}
+
 function m_play() {
     if (oAudio.paused) {
         oAudio.play();
         btn.attr("class", "fa fa-pause");
         album.addClass("playing");
         album.removeClass("paused");
-        // $('.progress').animate({opacity:"1"});
-        // $('body').width() > 450 ? $('.progress .current').css({'width': audio.currentTime / audio.duration * 100 + '%'}) + ($('.album').css('opacity') != 1 ? $('.album').css({'opacity': 1}) : '') : $('.album').css({'opacity': 1.1 - audio.currentTime / audio.duration});
     }
     else {
         oAudio.pause();
@@ -52,10 +47,15 @@ function next_music() {
 
 function load_music() {
     $.get("player.php", function (data) {
-        mp3_info = JSON.parse(data);
-        $("#player").attr("src", mp3_info.mp3);
-        $("#album").css("background-image", "url('" + mp3_info.cover + "')");
+        music_info = JSON.parse(data);
+        $("#player").attr("src", music_info.mp3);
+        $("#album").css("background-image", "url('" + music_info.cover + "')");
+        $('.title h1').html(music_info.title);
+        $('.title h2').html(music_info.artist+" &mdash; "+music_info.album);
+        oAudio.addEventListener('timeupdate', update_progress, false);
         oAudio.play();
     });
 }
+
 window.onload = next_music;
+
