@@ -6,7 +6,7 @@ album = $("#album");
 
 
 $('.control .home').click(function(){
-    window.open('https://idongu.com');
+    window.open('http://music.163.com');
 })
 $('.control .next').click(function(){
     oAudio.pause();
