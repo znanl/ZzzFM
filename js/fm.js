@@ -50,7 +50,7 @@ function load_music() {
         $("#player").attr("src", music_info.mp3);
         $("#album").css("background-image", "url('" + music_info.cover + "')");
         $('.title h1').html(music_info.title);
-        $('.title h2').html(music_info.artist+" &mdash; "+music_info.album);
+        $('.title h2').html(music_info.artist);
         oAudio.addEventListener('timeupdate', update_progress, false);
         oAudio.play();
     });
