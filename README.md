@@ -7,7 +7,7 @@ ZzzFM
 - 直接新建一個歌單給電臺使用就行了，簡單省事
 
 #####來瞧一下
-- [lastest version] https://fm-dongu.rhcloud.com/
+- [lastest version] https://fm-kagami.rhcloud.com/
 - [goodbest(contributor)] http://cnn.oldcat.me/song/
 - 能上就好，我會亂刪東西，因此你打開的時候可能會...
 - 這個是自動播放的，第一首可能有點慢，攢點耐心，切歌也有點慢...
