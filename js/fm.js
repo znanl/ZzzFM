@@ -5,7 +5,7 @@ btn = $("#m_play");
 album = $("#album");
 
 $('.control .home').click(function(){
-    window.open('https://idongu.com'); //这里放你的主页，现在这个是我的主页
+    window.open('http://me.hub.moe'); //这里放你的主页，现在这个是我的主页
 })
 $('.control .next').click(function(){
     oAudio.pause();
