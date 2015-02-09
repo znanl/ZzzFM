@@ -5,7 +5,7 @@ btn = $("#m_play");
 album = $("#album");
 
 $('.control .home').click(function(){
-    window.open('http://me.hub.moe'); //这里放你的主页，现在这个是我的主页
+    window.open('http://music.163.com'); //这里可以放你的主页，现在这个是网页云音乐的首页
 })
 $('.control .next').click(function(){
     oAudio.pause();
@@ -19,7 +19,7 @@ $("#player").bind("ended", function () {
 });
 
 function update_progress() {
-    $('body').width() > 422 ? $('.progress .current').css({'width': oAudio.currentTime / oAudio.duration * 100 + '%'}) + ($('.album img').css('opacity') != 1 ? $('.album img').css({'opacity': 1}) : '') : $('.album img').css({'opacity': 1.1 - oAudio.currentTime / oAudio.duration});
+    $('.progress .current').css({'width': oAudio.currentTime / oAudio.duration * 100 + '%'}) + ($('.album img').css('opacity') != 1 ? $('.album img').css({'opacity': 1}) : '');
 }
 
 function m_play() {

@@ -1,6 +1,7 @@
 <?php
 #網易雲音樂 - MinonHeart
 #http://music.163.com/#/user/home?id=16393337
+#以下均为示例ID，请填写自己喜欢歌单的ID或者单曲的ID
 
 #歌单ID
 $playlist_list = array(
