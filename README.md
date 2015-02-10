@@ -4,25 +4,20 @@ ZzzFM
 
 #####歌曲设置
 - 修改list.php中的歌曲ID和歌单ID
-
+- 首页 Home 按钮的链接设置：更改 js/fm.js 第 8 行即可
 - 直接新建一個歌單給電臺使用就行了，簡單省事
 
 #####來瞧一下
-- [goodbest(contributor)] http://cnn.oldcat.me/song/
-
+- [GoodBest(Contributor)] http://cnn.oldcat.me/song/
+- [Latest Version(可随时销毁)] http://fm.idongu.com/ZzzFM/
 - 這個是自動播放的，第一首可能有點慢，攢點耐心，切歌也有點慢...
 
 #####特別注意
 - PHP需要开启curl插件
-
 - 按照 http://fm.hub.moe/ 的界面改的，這個是使用蝦米的資源
-
 - 代碼什麼的完全不懂啦！不要留問題下來，有事找Mooooooon，也就是master
-
 - 專輯圖片的載入太拖泥帶水了，這個自個想辦法
-
 - 網易雲音樂會抽你們知道麼，大霧 :)
-
 - 不知道高分辨率下的顯示效果，反正是能用吧
 
 - NetEase Cloud Music(NCM) is a very cool music website in China, and this project must need NCM. The project isn't useful for those that they're not Chinese, but you can listen to music in here < http://music.163.com/ >.
