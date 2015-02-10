@@ -141,12 +141,13 @@ img { width: auto; height: auto; }
     margin-top: 15px;
     position: relative;
     z-index: -99;
-    color: #222; }
+    color: #222;
+}
 .title h1 { font-size: 18px; }
 .title h1:before { content: '「'; }
 .title h1:after { content: '」'; }
 .title h2 {
+    font-size: 16px;
     margin-top: 10px;
     margin-bottom: 20px;
-    font-size: 16px;
 }
