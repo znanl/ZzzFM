@@ -6,7 +6,7 @@ fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, 
 canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, 
 section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; outline: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 html { display: block; }
-body { background: rgb(253,253,253); line-height: 1; margin: 0; font-family: "Segoe UI", "微软雅黑", "Microsoft Jhenghei", sans-serif; }
+body { background: rgb(253,253,253); line-height: 1; margin: 0; font-family: "Segoe UI", \5FAE\8F6F\96C5\9ED1, "Microsoft Jhenghei", sans-serif; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 ol, ul { list-style: none; }
 blockquote, q { quotes: none; }

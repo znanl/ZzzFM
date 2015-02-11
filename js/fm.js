@@ -1,11 +1,11 @@
-//缺少错误处理, 把ID搞錯的話, 就手動點擊下一首吧
+//lack error handling
 
 oAudio = document.getElementById('player');
 btn = $("#m_play");
 album = $("#album");
 
 $('.control .home').click(function(){
-    window.open('http://music.163.com'); //这里可以放你的主页，现在这个是网页云音乐的首页
+    window.open('http://music.163.com'); //Homepage
 })
 $('.control .next').click(function(){
     oAudio.pause();
