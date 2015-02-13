@@ -3,13 +3,13 @@ ZzzFM
 私人電臺，資源是使用的網易雲音樂
 
 #####歌曲设置
-- 修改list.php中的歌曲ID和歌单ID
+- 修改 list.php 中的歌曲ID和歌单ID
 - 首页 Home 按钮的链接设置：更改 js/fm.js 第 8 行即可
 - 直接新建一個歌單給電臺使用就行了，簡單省事
 
 #####來瞧一下
 - [GoodBest(Contributor)] http://cnn.oldcat.me/song/
-- [Latest Version(可随时销毁)] http://fm.idongu.com/ZzzFM/
+- [Latest Version(可随时销毁)] http://fm.idongu.com/
 - 這個是自動播放的，第一首可能有點慢，攢點耐心，切歌也有點慢...
 
 #####特別注意
