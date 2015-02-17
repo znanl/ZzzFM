@@ -6,20 +6,20 @@ album = $("#album");
 
 $('.control .home').click(function(){
     window.open('http://music.163.com'); //Homepage
-})
+});
 $('.control .next').click(function(){
     oAudio.pause();
     next_music();
-})
+});
 $('.container .center').click(function(){
     m_play();
-})
+});
 $("#player").bind("ended", function () {
     next_music();
 });
 
 function update_progress() {
-    $('.progress .current').css({'width': oAudio.currentTime / oAudio.duration * 100 + '%'}) + ($('.album img').css('opacity') != 1 ? $('.album img').css({'opacity': 1}) : '');
+    $('.progress .current').css({'width': oAudio.currentTime / oAudio.duration * 100 + '%'}) + ($('.album').css('opacity') != 1 ? $('.album').css({'opacity': 1}) : '');
 }
 
 function m_play() {
@@ -45,7 +45,7 @@ function next_music() {
 }
 
 function load_music() {
-    $.get("player.php", function (data) {
+    $.get("player.php?_=" + (new Date()).getTime(), function (data) {
         music_info = JSON.parse(data);
         $("#player").attr("src", music_info.mp3);
         $("#album").css("background-image", "url('" + music_info.cover + "')");
