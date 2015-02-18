@@ -4,28 +4,6 @@ oAudio = document.getElementById("player");
 btn = $("#m_play");
 album = $("#album");
 
-$(document).ready(function () {
-    $.get("player.php?_=" + (new Date()).getTime(), function (data) {
-        music_info = JSON.parse(data);
-        $("#player").attr("src", music_info.mp3);
-        $("#cover").attr({"src": music_info.cover + "?param=300y300", "data-src": music_info.cover});
-        $(".title h1").html(music_info.title);
-        $(".title h2").html(music_info.artist);
-        oAudio.addEventListener("timeupdate", update_progress, false);
-        oAudio.play();
-        
-        if (oAudio.paused) {
-            btn.attr("class", "fa fa-play");
-            album.addClass("paused");
-        }
-        else {
-            btn.attr("class", "fa fa-pause");
-            album.addClass("playing");
-            album.removeClass("paused");
-        }
-    });
-});
-
 $(".control .home").click(function(){
     window.open("https://github.com/MinonHeart/ZzzFM"); //Homepage
 });
@@ -59,11 +37,16 @@ function m_play() {
 }
 
 function next_music() {
-    album.removeClass("paused");
-    album.removeClass("playing");
-    load_music();
-    btn.attr("class", "fa fa-pause");
-    album.addClass("playing");
+    if (oAudio.paused) {
+        load_music();
+    }
+    else {
+        album.removeClass("paused");
+        album.removeClass("playing");
+        load_music();
+        btn.attr("class", "fa fa-pause");
+        album.addClass("playing");
+    }
 }
 
 function load_music() {
@@ -75,7 +58,17 @@ function load_music() {
         $(".title h2").html(music_info.artist);
         oAudio.addEventListener("timeupdate", update_progress, false);
         oAudio.play();
+
+        if (oAudio.paused) {
+            btn.attr("class", "fa fa-play");
+            album.addClass("paused");
+        }
+        else {
+            btn.attr("class", "fa fa-pause");
+            album.addClass("playing");
+            album.removeClass("paused");
+        }
     });
 }
 
-// window.onload = next_music;
+window.onload = load_music;
