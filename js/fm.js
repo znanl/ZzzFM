@@ -5,7 +5,7 @@ btn = $("#m_play");
 album = $("#album");
 
 $('.control .home').click(function(){
-    window.open('http://music.163.com'); //Homepage
+    window.open('https://github.com/MinonHeart/ZzzFM'); //Homepage
 });
 $('.control .next').click(function(){
     oAudio.pause();
@@ -48,7 +48,7 @@ function load_music() {
     $.get("player.php?_=" + (new Date()).getTime(), function (data) {
         music_info = JSON.parse(data);
         $("#player").attr("src", music_info.mp3);
-        $("#album").css("background-image", "url('" + music_info.cover + "')");
+        $('#album img').attr({'src': music_info.cover + "?param=250y250", 'data-src': music_info.cover}); // $("#album").css("background-image", "url('" + music_info.cover + "')");
         $('.title h1').html(music_info.title);
         $('.title h2').html(music_info.artist);
         oAudio.addEventListener('timeupdate', update_progress, false);

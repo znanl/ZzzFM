@@ -1,22 +1,19 @@
 ZzzFM
 ========
-私人電臺，資源是使用的網易雲音樂
+私人电台，资源来自网易云音乐
 
 #####歌曲设置
 - 修改 list.php 中的歌曲ID和歌单ID
 - 首页 Home 按钮的链接设置：更改 js/fm.js 第 8 行即可
-- 直接新建一個歌單給電臺使用就行了，簡單省事
 
 #####來瞧一下
 - [GoodBest(Contributor)] http://cnn.oldcat.me/song/
 - [Latest Version(可随时销毁)] http://fm.idongu.com/
-- 這個是自動播放的，第一首可能有點慢，攢點耐心，切歌也有點慢...
+- 这个电台是自动播放的，最好放在中国的服务器上，以获得较快的歌曲加载速度
 
 #####特別注意
-- PHP需要开启curl插件
-- 按照 http://fm.hub.moe/ 的界面改的，這個是使用蝦米的資源
-- 代碼什麼的完全不懂啦！不要留問題下來，有事找Mooooooon，也就是master
-- 專輯圖片的載入太拖泥帶水了，這個自個想辦法
-- 網易雲音樂會抽你們知道麼，大霧 :)
-- 不知道高分辨率下的顯示效果，反正是能用吧
+- PHP 需要启用 Curl 插件
+- 按照 http://fm.hub.moe/ 的界面改的，这个是引用虾米资源的一个电台
+- 代码什么的完全不懂啦！不要留问题下來，有事找 Mooooooon，也就是 Master
+- 不知道高分辨率下的显示效果，反正是能用吧
 - NetEase Cloud Music(NCM) is a very cool music website in China, and this project must need NCM. The project isn't useful for those that they're not Chinese, but you can listen to music in here < http://music.163.com/ >.
