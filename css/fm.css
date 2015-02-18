@@ -144,8 +144,8 @@ img { width: auto; height: auto; }
     margin: 10px 0;
     font-size: 18px;
 }
-.title h1:before { content: '「'; }
-.title h1:after { content: '」'; }
+.title h1:before { content: '\300c'; }
+.title h1:after { content: '\300d'; }
 .title h2 {
     margin: 10px 0;
     font-size: 16px;
