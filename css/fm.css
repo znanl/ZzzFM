@@ -1,12 +1,17 @@
-/* ---------------- [ Reset ] ---------------- */
+/* ----------------------------------------------------- *
+ *  Reset
+** ----------------------------------------------------- */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, 
 samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, 
 fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, 
 canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby,
-section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; outline: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+section, summary, time, mark, audio, video {
+    margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; outline: none;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
 html { display: block; }
-body { background: #fefefe; line-height: 1; margin: 0; font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", \5FAE\8F6F\96C5\9ED1, sans-serif; }
+body { background: #fefefe; line-height: 1; margin: 0; }
 article, aside, details, figcaption, figure, footer, header, menu, nav, section { display: block; }
 ol, ul { list-style: none; }
 blockquote, q { quotes: none; }
@@ -14,7 +19,10 @@ strong { font-weight: bold; }
 table { border-collapse: collapse; border-spacing: 0; }
 img { width: auto; height: auto; }
 
-/* ---------------- [ Main ] ---------------- */
+/* ----------------------------------------------------- *
+ *  Main
+** ----------------------------------------------------- */
+body { font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", \5FAE\8F6F\96C5\9ED1, sans-serif; }
 .container {
     display: block;
     margin-top: 10%;
@@ -33,10 +41,10 @@ img { width: auto; height: auto; }
 @-o-keyframes rotate { from {-o-transform: rotate(0deg) } to {-o-transform: rotate(359deg) } }
 @keyframes rotate { from {transform: rotate(0deg) } to {transform: rotate(359deg) } }
 .paused img {
-    -webkit-animation-play-state: paused!important;
-       -moz-animation-play-state: paused!important;
-         -o-animation-play-state: paused!important;
-            animation-play-state: paused!important;
+    -webkit-animation-play-state: paused !important;
+       -moz-animation-play-state: paused !important;
+         -o-animation-play-state: paused !important;
+            animation-play-state: paused !important;
 }
 .playing img {
     -webkit-animation: rotate 30s linear infinite;
@@ -109,10 +117,10 @@ img { width: auto; height: auto; }
     background: rgba(0,0,0,0.6);
     border-radius: 50%;
     cursor: pointer;
-    -webkit-transition: opacity linear.4s;
-       -moz-transition: opacity linear.4s;
-         -o-transition: opacity linear.4s;
-            transition: opacity linear.4s;
+    -webkit-transition: opacity linear .4s;
+       -moz-transition: opacity linear .4s;
+         -o-transition: opacity linear .4s;
+            transition: opacity linear .4s;
     box-shadow: inset 0 0 15px 3px rgba(0,0,0,0.8);
 }
 .progress {
@@ -129,10 +137,10 @@ img { width: auto; height: auto; }
     width: 0;
     height: 100%;
     background:  #666;
-    -webkit-transition:.5s ease;
-       -moz-transition:.5s ease;
-         -o-transition:.5s ease;
-            transition:.5s ease;
+    -webkit-transition: .5s ease;
+       -moz-transition: .5s ease;
+         -o-transition: .5s ease;
+            transition: .5s ease;
 }
 .title {
     position: relative;

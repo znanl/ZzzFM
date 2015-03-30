@@ -1,11 +1,9 @@
-//lack error handling
-
 oAudio = document.getElementById("player");
 btn = $("#m_play");
 album = $("#album");
 
 $(".control .home").click(function(){
-    window.open("https://github.com/MinonHeart/ZzzFM"); //Homepage
+    window.open("https://github.com/MinonHeart/ZzzFM"); //HOME
 });
 $(".control .next").click(function(){
     oAudio.pause();
@@ -19,7 +17,7 @@ $("#player").bind("ended", function () {
 });
 
 function update_progress() {
-    $(".progress .current").css({"width": oAudio.currentTime / oAudio.duration * 100 + "%"}) + ($(".album").css("opacity") != 1 ? $(".album").css({"opacity": 1}) : "");
+    $(".progress .current").css({"width": oAudio.currentTime / oAudio.duration * 100 + "%"}) + ($(".album img").css("opacity") != 1 ? $(".album img").css({"opacity": 1}) : "");
 }
 
 function m_play() {
@@ -28,8 +26,7 @@ function m_play() {
         btn.attr("class", "fa fa-pause");
         album.addClass("playing");
         album.removeClass("paused");
-    }
-    else {
+    } else {
         oAudio.pause();
         btn.attr("class", "fa fa-play");
         album.addClass("paused");
@@ -39,8 +36,7 @@ function m_play() {
 function next_music() {
     if (oAudio.paused) {
         load_music();
-    }
-    else {
+    } else {
         album.removeClass("paused");
         album.removeClass("playing");
         load_music();
@@ -62,8 +58,7 @@ function load_music() {
         if (oAudio.paused) {
             btn.attr("class", "fa fa-play");
             album.addClass("paused");
-        }
-        else {
+        } else {
             btn.attr("class", "fa fa-pause");
             album.addClass("playing");
             album.removeClass("paused");
