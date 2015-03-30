@@ -1,5 +1,4 @@
 #ZzzFM
-========
 个人电台，资源来自网易云音乐
 
 ####歌曲设置
@@ -16,5 +15,7 @@
 
 ####特別注意
 - **PHP 需要启用 Curl 插件**
+
 - 不知道高分辨率下的显示效果，反正是能用吧
+
 - NetEase Cloud Music(NCM) is a very cool music website in China, and this project must need NCM. The project isn't useful for those that they're not Chinese, but you can listen to music in here < http://music.163.com/ >.
