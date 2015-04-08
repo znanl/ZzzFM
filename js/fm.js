@@ -64,6 +64,7 @@ function load_music() {
             album.removeClass("paused");
         }
     });
+    oAudio.volume = 0.6;
 }
 
 window.onload = load_music;
