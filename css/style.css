@@ -1,0 +1,161 @@
+/* ----------------------------------------------------- *
+ *  Reset
+ * ----------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s,
+samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby,
+section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; outline: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html, article, aside, details, figcaption, figure, footer, header, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+strong { font-weight: bold; }
+table { border-collapse: collapse; border-spacing: 0; }
+img { width: auto; height: auto; }
+
+/* ----------------------------------------------------- *
+ *  Main
+ * ----------------------------------------------------- */
+body {
+    line-height: 1;
+    background: #fefefe;
+    font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", \5FAE\8F6F\96C5\9ED1, sans-serif;
+}
+body:hover .control { opacity: 1; }
+.container {
+    display: block;
+    padding-top: 10%;
+    overflow: hidden;
+    text-align: center;
+}
+.player {
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    line-height: 0; /* fix div height */
+}
+@-webkit-keyframes rotate { from {-webkit-transform: rotate(0deg) } to {-webkit-transform: rotate(360deg) } }
+@-moz-keyframes rotate { from {-moz-transform: rotate(0deg) } to {-moz-transform: rotate(359deg) } }
+@-o-keyframes rotate { from {-o-transform: rotate(0deg) } to {-o-transform: rotate(359deg) } }
+@keyframes rotate { from {transform: rotate(0deg) } to {transform: rotate(359deg) } }
+.paused img {
+    -webkit-animation-play-state: paused !important;
+    -moz-animation-play-state: paused !important;
+    -o-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+}
+.playing img {
+    -webkit-animation: rotate 30s linear infinite;
+    -moz-animation: rotate 30s linear infinite;
+    -o-animation: rotate 30s linear infinite;
+    animation: rotate 30s linear infinite;
+}
+.album img {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+.album:hover .center { opacity: 1; }
+.control {
+    position: fixed;
+    top: 5%;
+    margin: 0 0 0 20px;
+    z-index: 999;
+    -webkit-transition: linear opacity .3s;
+    -moz-transition: linear opacity .3s;
+    -o-transition: linear opacity .3s;
+    transition: linear opacity .3s;
+}
+.control i {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 50%;
+    color: rgba(255,255,255,0.9);
+    background: rgba(0,0,0,0.3);
+    -webkit-transition: linear .3s;
+    -moz-transition: linear .3s;
+    -o-transition: linear .3s;
+    transition: linear .3s;
+}
+.control i:hover {
+    color: rgba(255,255,255,1);
+    background: rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+.center, .start {
+    display: table-cell;
+    vertical-align: middle;
+}
+.player .start {
+    position: absolute;
+    top: 0;
+    margin-top: 125px;
+    margin-left: 129px;
+}
+.player .start .fa-play, .player .start .fa-pause {
+    font-size: 54px;
+    color: rgba(255,255,255,0.6);
+}
+.player .start .fa-play:hover, .player .start .fa-pause:hover {
+    color: rgba(255,255,255,0.8);
+    cursor: pointer;
+}
+.player .center {
+    opacity: 0;
+    position: absolute;
+    margin-top: -300px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 15px 3px rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.6);
+    cursor: pointer;
+    -webkit-transition: opacity linear .4s;
+    -moz-transition: opacity linear .4s;
+    -o-transition: opacity linear .4s;
+    transition: opacity linear .4s;
+}
+.progress {
+    opacity: 1;
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    height: 3px;
+    background: #ddd;
+}
+.progress .current {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 100%;
+    background:  #666;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+.title {
+    position: relative;
+    margin: 20px 0;
+    color: #222;
+    z-index: -99;
+}
+.title h1 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #555;
+}
+.title h1:before { content: "\300c"; }
+.title h1:after { content: "\300d"; }
+.title h2 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #666;
+}

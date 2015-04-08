@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+<html>
+<head lang="zh-CN">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>ZzzFM - 聆听一首音乐，怀念一段时光。</title>
-    <link rel="stylesheet" href="css/fa.css">
-    <link rel="stylesheet" href="css/fm.css">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.min.js"></script>
 </head>
 
@@ -14,26 +16,30 @@
         <div class="home"><i class="fa fa-home" title="Home"></i></div>
         <div class="next"><i class="fa fa-chevron-right" title="Next"></i></div>
     </div>
+
     <div class="container">
-        <div class="player">
-            <div class="cd">
-                <div id="album" class="album">
-                    <img id="cover" src="img/album.jpg" data-src="">
-                    <div class="center">
-                        <span class="start"><i id="m_play" class="fa fa-play"></i></span>
-                    </div>
+        <section class="player">
+            <div id="album" class="album">
+                <img src="img/album.jpg" data-src="" id="cover">
+                <div class="center">
+                    <span class="start"><i id="m_play" class="fa fa-play"></i></span>
                 </div>
-                <span class="progress">
-                    <span class="current"></span>
-                </span>
             </div>
-            <section class="title">
-                <h1 class="name">音乐标题</h1>
-                <h2 class="sub-title">歌手</h2>
-            </section>
-            <audio id="player" src=""></audio>
-        </div>
+
+            <span class="progress">
+                <span class="current"></span>
+            </span>
+        </section>
+
+        <section class="title">
+            <h1 class="name">音乐标题</h1>
+            <h2 class="singer">歌手</h2>
+        </section>
+
+        <audio id="player" src=""></audio>
+
     </div>
-    <script src="js/fm.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
