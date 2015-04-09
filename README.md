@@ -4,7 +4,7 @@
 #### 歌曲设置
 - 修改 **list.php** 中的歌曲ID和歌单ID
 
-- 首页 Home 按钮的链接设置：更改 **js/fm.js** 文件中的 **window.open(" ")** 的地址即可
+- 首页 Home 按钮的链接设置：更改 **js/script.js** 文件中的 **window.open(" ")** 的地址即可
 
 #### 键盘操作
 - <kbd>→</kbd> 可以快速地切换下一首音乐
