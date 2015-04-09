@@ -29,7 +29,7 @@ $(document).ready(function(){
         switch (e.keyCode){
             case 32: m_play();
                 break; //keyboard space
-            case 39: next_music();
+            case 39: mSource[0].pause(); next_music();
                 break; //keyboard right
         }
     });
