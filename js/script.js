@@ -49,10 +49,6 @@ $(document).ready(function(){
         $(".progress .current").css({"width": mSource[0].currentTime/mSource[0].duration*100 + "%"});
     }
 
-    function error_fallback(){
-        load_music();
-    }
-
 
 
     //Body
@@ -86,7 +82,6 @@ $(document).ready(function(){
     mSource[0].addEventListener('pause', paused_fallback, false);
     mSource[0].addEventListener('ended', load_music, false);
     mSource[0].addEventListener("timeupdate", update_progress, false);
-    mSource[0].addEventListener('error', error_fallback, false);
 
     window.onload = load_music;
 
