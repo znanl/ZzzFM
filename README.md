@@ -12,7 +12,7 @@
 - <kbd>Space</kbd> 可以暂停音乐或播放音乐
 
 #### 来瞧一下
-- [Latest Version(最新版本的演示)] http://fm.idongu.com/
+- http://fm.idongu.com/
 
 - 这个电台是自动播放的，最好放在中国的服务器上，以获得较快的歌曲加载速度
 
