@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 
     //Functions
-    function load_music(){
+    function loadMusic(){
         $.get("player.php?_=" + (new Date()).getTime(), function (data){
             var music_info = JSON.parse(data);
             mSource.attr({"src": music_info.mp3});
@@ -27,7 +27,7 @@ $(document).ready(function(){
         mSource[0].volume = 0.5; //set default volume; no effect on mobilephone
     }
 
-    function media_button(){
+    function mediaButton(){
         if (mSource[0].paused){
             mSource[0].play();
         } else{
@@ -35,17 +35,17 @@ $(document).ready(function(){
         }
     }
 
-    function playing_fallback(){
+    function playingFallback(){
         mButton.attr("class", "fa fa-pause");
         mAlbum.addClass("playing").removeClass("paused");
     }
 
-    function paused_fallback(){
+    function pausedFallback(){
         mButton.attr("class", "fa fa-play");
         mAlbum.addClass("paused"); //Don't remove class "playing"
     }
 
-    function update_progress(){
+    function updateProgress(){
         $(".progress .current").css({"width": mSource[0].currentTime/mSource[0].duration*100 + "%"});
     }
 
@@ -57,32 +57,32 @@ $(document).ready(function(){
     });
     $(".control .next").click(function(){
         mSource[0].pause();
-        load_music();
+        loadMusic();
     });
     $(".container .center").click(function(){
-        media_button();
+        mediaButton();
     });
 
     //listen keyboard
     $(document).keyup(function(e){
         switch (e.keyCode){
             case 32: //keyboard space
-                media_button();
+                mediaButton();
                 break;
             case 39: //keyboard right
                 mSource[0].pause();
-                load_music();
+                loadMusic();
                 break;
             default:
                 break;
         }
     });
 
-    mSource[0].addEventListener('playing', playing_fallback, false);
-    mSource[0].addEventListener('pause', paused_fallback, false);
-    mSource[0].addEventListener('ended', load_music, false);
-    mSource[0].addEventListener('timeupdate', update_progress, false);
+    mSource[0].addEventListener('playing', playingFallback, false);
+    mSource[0].addEventListener('pause', pausedFallback, false);
+    mSource[0].addEventListener('ended', loadMusic, false);
+    mSource[0].addEventListener('timeupdate', updateProgress, false);
 
-    window.onload = load_music;
+    window.onload = loadMusic;
 
 });
