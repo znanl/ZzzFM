@@ -6,7 +6,7 @@ pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q,
 samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby,
-section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; outline: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; outline: none; }
 html, article, aside, details, figcaption, figure, footer, header, menu, nav, section { display: block; }
 ol, ul { list-style: none; }
 blockquote, q { quotes: none; }
@@ -18,9 +18,8 @@ img { width: auto; height: auto; }
  *  Main
  * ----------------------------------------------------- */
 body {
-    line-height: 1;
     background: #fefefe;
-    font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", \5FAE\8F6F\96C5\9ED1, sans-serif;
+    font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", "STXihei", "Microsoft JhengHei", sans-serif;
 }
 body:hover .control { opacity: 1; }
 .container {
@@ -83,21 +82,23 @@ body:hover .control { opacity: 1; }
     -moz-transition: linear .3s;
     -o-transition: linear .3s;
     transition: linear .3s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .control i:hover {
     color: rgba(255,255,255,1);
     background: rgba(0,0,0,0.6);
     cursor: pointer;
 }
-.center, .start {
-    display: table-cell;
-    vertical-align: middle;
-}
 .player .start {
     position: absolute;
+    display: table-cell;
     top: 0;
     margin-top: 125px;
     margin-left: 129px;
+    vertical-align: middle;
 }
 .player .start .fa-play, .player .start .fa-pause {
     font-size: 54px;
@@ -145,6 +146,7 @@ body:hover .control { opacity: 1; }
     position: relative;
     margin: 20px 0;
     color: #222;
+    line-height: 1;
     z-index: -99;
 }
 .title h1 {
